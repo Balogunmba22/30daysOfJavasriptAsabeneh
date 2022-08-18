@@ -156,8 +156,8 @@ let count = 'You cannot end a sentence with because because because is a conjunc
 
 console.log(count.match(/because/gi));
 
-/*Q3: Clean the following text and find the most frequent word (hint, use replace and regular expressions). 
-'%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching';*/
+//Q3: Clean the following text and find the most frequent word (hint, use replace and regular expressions). 
+
 let statement = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching';
 
 let regEx = statement.replace(/[^a-z 0-9]/gi, '');
@@ -167,5 +167,10 @@ console.log(regEx);  // NOT SURE IF THIS IS THE END OF THE SOLUTION
 let text = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.';
 
 let textReg =  text.match(/\d+/g); //this extracts the numbers in the string and return an array of: ['5000', '10000', '15000']
-//TO BE CONTINUED...
+let salary = parseInt(textReg[0]) * 12;
+let bonus = parseInt(textReg[1]);
+let onlineCourses = parseInt(textReg[2]) * 12;
+
+const annualIncome = salary + bonus + onlineCourses;
+console.log(annualIncome);
 
