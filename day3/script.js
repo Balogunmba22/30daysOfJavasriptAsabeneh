@@ -86,7 +86,7 @@ console.log(!'jargon'.includes('on') && !'python'.includes('on')); //false
 // 'What is the minutes now?';
 // 'Find out the numbers of seconds elapsed from January 1, 1970 to now.';
 
-const date = new Date();
+/*const date = new Date();
 console.log(date);
 
 console.log(date.getFullYear());
@@ -95,7 +95,7 @@ console.log(date.getDate());
 console.log(date.getDay());
 console.log(date.getHours());
 console.log(date.getMinutes());
-console.log(date.getTime());
+console.log(date.getTime());*/
 
 /*ALTERNATIVE WAY OF GETTING ALL SECONDS
 const seconds = Date.now();
@@ -107,36 +107,36 @@ console.log(seconds);
 /*no1: Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
 a. Enter base: 20
 b. Enter height: 10
-c. The area of the triangle is 100*/
+c. The area of the triangle is 100
 let base = prompt('enter base', ''); height = prompt('enter height', '');
 let area = parseInt(base) * parseInt(height) * 0.5;
-alert(`the area of the triangle is ${area}`);
+alert(`the area of the triangle is ${area}`); */
 
 /*no2: Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
 Enter side a: 5
 Enter side b: 4
 Enter side c: 3
-The perimeter of the triangle is 12*/
+The perimeter of the triangle is 12
 let a = prompt('enter side a');
 let b = prompt('enter side b');
 let c = prompt('enter side c');
 let perimeter = parseInt(a) + parseInt(b) + parseInt(c);
-alert(`the perimeter of the triangle is ${perimeter}`);
+alert(`the perimeter of the triangle is ${perimeter}`);*/
 
-/*no3: Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))  */
+/*no3: Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))  
 let length = prompt('enter length'); width = prompt('enter width');
 let areaOfRectangle = parseInt(length) * parseInt(width);
 let perimeterOfRectangle = 2 * parseInt(length) * parseInt(width);
 alert(`the area of the rectangle is ${areaOfRectangle}`);
-alert(`the perimeter of the rectangle is ${perimeterOfRectangle}`);
+alert(`the perimeter of the rectangle is ${perimeterOfRectangle}`);*/
 
-/*no4: Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14. */
+/*no4: Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14. 
 const pi = 3.14;
 let radius = prompt('enter radius');
 let areaOfCircle = pi * parseInt(radius) * parseInt(radius);
 let circumference = 2 * pi * parseInt(radius);
 alert(`the area of the circle is ${areaOfCircle}`);
-alert(`the circumference of the circle is ${circumference}`);
+alert(`the circumference of the circle is ${circumference}`); */
 
 /*no5, 6, 7, 8: 
 Calculate the slope, x-intercept and y-intercept of y = 2x -2
@@ -145,54 +145,73 @@ Compare the slope of above two questions.
 Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.*/ 
 //I DON'T UNDERSTAND KNOW HOW TO TACKLE THESE QUESTIONS
 
-/*no9: Write a script that prompt a user to enter hours and rate per hour. Calculate pay of the person? */
+/*no9: Write a script that prompt a user to enter hours and rate per hour. Calculate pay of the person? 
 let hours = prompt('enter hours');
 let rate = prompt('enter rate per hour');
 let pay = parseInt(hours) * parseInt(rate);
-alert(`your weekly earning is ${pay}`);
+alert(`your weekly earning is ${pay}`);*/
 
 /*no10: If the length of your name is greater than 7 say, your name is long else say your name is short. */
 let name = 'muhammed'.length;
 if (name > 7) {
-    alert('your name is long');
+    console.log('your name is long');
 } else {
-    alert('your name is short');
+    console.log('your name is short');
 }
 
 /*no11: Compare your first name length and your family name length and you should get this output:  Your first name, Asabeneh is longer than your family name, Yetayeh*/
 let fName = 'Muhammed'.length; lName = 'Balogun'.length;
 if (fName > lName) {
-    alert('Your first name, Muhammed is longer than your family name, Balogun');
+    console.log('Your first name, Muhammed is longer than your family name, Balogun');
 }
 
 //no12: Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.
 let myAge = 250; yourAge = 25;
 if (myAge > yourAge) {
-    alert('I am 225years older than you');
+    console.log('I am 225years older than you');
 }
 
 //no13: Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
 
-let user = prompt('enter your dob', '');
+/*let user = prompt('enter your dob', '');
 if (user <= 2004 ) {
     alert('you are old enough, you can drive');
 } else {
     alert('you are too young to drive, wait few more years');
-}
+}*/
 
 //no14: Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
-let numberOfYears = prompt('enter number of years you have lived');
+/*let numberOfYears = prompt('enter number of years you have lived');
 let seconds = parseInt(numberOfYears) * 24 * 60 * 60 * 365;
-alert(`you live ${seconds} seconds`);
+alert(`you live ${seconds} seconds`);*/
 
 /*no15: Create a human readable time format using the Date time object
 YYYY-MM-DD HH:mm
 DD-MM-YYYY HH:mm
-DD/MM/YYYY HH:mm */ //TO BE DONE LATER
+DD/MM/YYYY HH:mm */
+const date = new Date();
+console.log(date);
+
+let thisYear = date.getFullYear();
+let month = date.getMonth() + 1;
+let todaysDate = date.getDate();
+//console.log(date.getDay());
+let hours = date.getHours();
+let mins = date.getMinutes();
+//console.log(date.getTime());
+
+
+// Format 1
+console.log(`${thisYear}-${month}-${todaysDate} ${hours}:${mins}`);
+// Format 2
+console.log(`${todaysDate}-${month}-${thisYear} ${hours}:${mins}`);
+// Format 3
+console.log(`${todaysDate}/${month}/${thisYear} ${hours}:${mins}`);
 
 // LEVEL 3
 /*Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
 YYY-MM-DD HH:mm eg. 20120-01-02 07:05*/ //TO BE DONE LATER
+
 
 
 
