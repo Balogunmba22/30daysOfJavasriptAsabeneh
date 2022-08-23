@@ -102,10 +102,7 @@ console.log(typeof '9.8' === typeof 10) //false
  console.log(typeof Math.round(floatString) === typeof 10 ); //true
 
  //Q5: Check if 'on' is found in both python and jargon
- let p = 'python';
- let j = 'jargon';
-
- console.log(p.includes('on') && j.includes('on')); //true
+ console.log('python'.includes('on') && 'jargon'.includes('on')); //true
 
  //Q6: I hope this course is not full of jargon. Check if jargon is in the sentence.
  let course = 'I hope this course is not full of jargon.';
