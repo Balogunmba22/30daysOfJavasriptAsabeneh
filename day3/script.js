@@ -130,26 +130,36 @@ let perimeterOfRectangle = 2 * parseInt(length) * parseInt(width);
 alert(`the area of the rectangle is ${areaOfRectangle}`);
 alert(`the perimeter of the rectangle is ${perimeterOfRectangle}`);*/
 
-/*no4: Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14. 
+/*no4: Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.*/ 
 const pi = 3.14;
 let radius = prompt('enter radius');
 let areaOfCircle = pi * parseInt(radius) * parseInt(radius);
 let circumference = 2 * pi * parseInt(radius);
 alert(`the area of the circle is ${areaOfCircle}`);
-alert(`the circumference of the circle is ${circumference}`); */
+alert(`the circumference of the circle is ${circumference}`); 
 
-/*no5, 6, 7, 8: 
-Calculate the slope, x-intercept and y-intercept of y = 2x -2
-Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10)
-Compare the slope of above two questions.
-Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.*/ 
-//I DON'T UNDERSTAND KNOW HOW TO TACKLE THESE QUESTIONS
+//n05 Calculate the slope, x-intercept and y-intercept of y = 2x -2
+let n = prompt('enter value for x');
+const s = 2 * n - 2;
+alert(`sope is ${s}`);
 
-/*no9: Write a script that prompt a user to enter hours and rate per hour. Calculate pay of the person? 
-let hours = prompt('enter hours');
+//no6 Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10)
+let m = (10 - 2) / (6 - 2);
+alert(m);
+
+//no7 Compare the slope of above two questions.
+console.log(s == m);
+
+//no8 Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0. 
+let x = prompt("Enter a value for n ");
+ let y = x * x + 6 * x + 9;
+ console.log(y);
+
+/*no9: Write a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?*/ 
+let hour = prompt('enter hours');
 let rate = prompt('enter rate per hour');
-let pay = parseInt(hours) * parseInt(rate);
-alert(`your weekly earning is ${pay}`);*/
+let pay = parseInt(hour) * parseInt(rate);
+alert(`your weekly earning is ${pay}`);
 
 /*no10: If the length of your name is greater than 7 say, your name is long else say your name is short. */
 let name = 'muhammed'.length;
@@ -173,17 +183,17 @@ if (myAge > yourAge) {
 
 //no13: Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
 
-/*let user = prompt('enter your dob', '');
+let user = prompt('enter your dob', '');
 if (user <= 2004 ) {
     alert('you are old enough, you can drive');
 } else {
     alert('you are too young to drive, wait few more years');
-}*/
+}
 
 //no14: Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
-/*let numberOfYears = prompt('enter number of years you have lived');
+let numberOfYears = prompt('enter number of years you have lived');
 let seconds = parseInt(numberOfYears) * 24 * 60 * 60 * 365;
-alert(`you live ${seconds} seconds`);*/
+alert(`you live ${seconds} seconds`);
 
 /*no15: Create a human readable time format using the Date time object
 YYYY-MM-DD HH:mm
@@ -210,7 +220,24 @@ console.log(`${todaysDate}/${month}/${thisYear} ${hours}:${mins}`);
 
 // LEVEL 3
 /*Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
-YYY-MM-DD HH:mm eg. 20120-01-02 07:05*/ //TO BE DONE LATER
+YYY-MM-DD HH:mm eg. 20120-01-02 07:05*/ 
+
+/*const todaysDate = new Date();
+console.log(todaysDate);
+let year = todaysDate.getFullYear();
+let month = todaysDate.getMonth() + 1;
+month = `${month}`;
+month = month.length < 2 ? `0${month}` : month;
+let day = todaysDate.getDate();
+day = `${day}`;
+day = day.length < 2 ? `0${day}` : day;
+let hr = todaysDate.getHours();
+hr = `${hr}`;
+hr = hr.length < 2 ? `0${hr}` : hr;
+let min = todaysDate.getMinutes();
+min = `${min}`;
+min = min.length < 2 ? `0${min}` : min;
+console.log(`${year}-${month}-${day} ${hr}:${min}`);*/
 
 
 
