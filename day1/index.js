@@ -41,7 +41,7 @@ let myAge = 47;
 */
 
 //Q9: Declare variables to store your first name, last name, marital status, country and age in a single line
-//let firtName = 'muhammed',  familyName = 'balogun', country = 'nigeria', isMarried = true, myAge = 47;
+let firtName = 'muhammed';  familyName = 'balogun'; country = 'nigeria'; married = true; myAge = 47;
 
 //Q10: Declare two variables myAge and yourAge and assign them initial values and log to the browser console
 let myAge = 47;
