@@ -174,14 +174,32 @@ for (let i = 0; i < 5; i++) {
 } console.log(randomNums)
 
 //q14 Develop a small script which generate array of 5 random numbers and the numbers must be unique
+let uniqRand = [];
+for (let i = 0; i <= 4; i++) {
+  const num = Math.floor(Math.random() * 10);
+  if (uniqRand.indexOf(num) == -1) {
+    uniqRand.push(num);
+  }
+} console.log(uniqRand);
 
 
 // 15 Develop a small script which generate a six characters random id:
-
+let characters = "abcdefghijklmnopqrstuvwzyz1234567890";
+let id = "";
+for (let i = 0; i <= 5; i++) {
+  const num = Math.floor(Math.random() * characters.length);
+  id = id + characters.charAt(num);
+} console.log(id);
 //LEVEL 2
 /*q1: Develop a small script which generate any number of characters random id:
 fe3jo1gl124g
 xkqci4utda1lmbelpkm03rba*/
+let char = "abcdefghijklmnopqrstuvwzyz1234567890";
+let randId = "";
+for (let i = 0; i <= char.length - 1; i++) {
+  const num = Math.floor(Math.random() * char.length);
+  randId = randId + char.charAt(num);
+} console.log(randId);
 
 /*q2: Write a script which generates a random hexadecimal number.
 '#ee33df'*/
@@ -309,12 +327,12 @@ let fruit = ['banana', 'orange', 'mango', 'lemon'] ;
 let reverseArr = []
 for (let i = fruit.length - 1; i >= 0; i--) {
    reverseArr.push(fruit[i]);
-} console.log(reverseArr);
+} console.log(reverseArr);       //['lemon', 'mango', 'orange', 'banana']
 
 //q16 Print all the elements of array as shown below.
 const fullStack = [
    ['HTML', 'CSS', 'JS', 'React'],
-   ['Node', 'Express', 'MongoDB'] //['lemon', 'mango', 'orange', 'banana']
+   ['Node', 'Express', 'MongoDB'] 
  ]
 
 let stackP = fullStack[0].concat(fullStack[1]);
