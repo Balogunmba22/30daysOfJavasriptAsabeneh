@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0 12vw;
+}
+
+h1 {
+    word-spacing: 1rem;
+    letter-spacing: 1rem;
+    padding: 2rem;
+}
+
+.title {
+    padding: 1.3rem 2.5rem;
+    background-color: bisque;
+    font-size: 1.5rem;
+}
+
+.courses {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3.5rem 0 3rem;
+
+}
+
+.courses-child {
+    border: 1px solid grey;
+    height: 12rem;
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.courses-child:hover {
+    background-color: bisque;
+    scale: 1.1;
+    transition: all ease-in-out .5s;
+}
+
+.tech {
+    font-size: 1.5rem;
+}
+.tech-skills {
+    color: orangered;
+    font-weight: 700;
+}
