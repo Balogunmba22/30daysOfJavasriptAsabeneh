@@ -13,21 +13,40 @@ body {
 }
 
 h1 {
-    word-spacing: 1rem;
-    letter-spacing: 1rem;
-    padding: 2rem;
+    word-spacing: 1.5rem;
+    letter-spacing: 2rem;
+    padding: 1.5rem 0 .5rem;
+    text-transform: uppercase;
+    font-family: Verdana, sans-serif;
 }
 
 .title {
-    padding: 1.3rem 2.5rem;
+    padding: 1.3rem 0;
     background-color: bisque;
     font-size: 1.5rem;
 }
 
+.animated-title{
+    animation-name: slidein;
+    animation-duration: 3s;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 0px;
+    }
+
+    to {
+      margin-left: 150px;
+    }
+  }
+  
+
 .courses {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 3.5rem 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 4rem 0 3rem;
+    place-items: center;
 
 }
 

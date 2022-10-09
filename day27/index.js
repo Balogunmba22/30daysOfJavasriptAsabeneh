@@ -1,7 +1,3 @@
-const titleEl = document.querySelector('.title')
-const techEl = document.querySelector('.tech')
-
-
 const titleArr = [
     'Software Engineer',
     'Motivational Speaker',
@@ -16,7 +12,11 @@ const techArr = [
     'REACT'
 ]
 
-// a function that generates random array numbers
+const titleEl = document.querySelector('.title')
+const techSkillsEl = document.querySelector('.tech-skills')
+
+
+// a function that generates random array numbers btw 0-4 (lenght of the arrays)
 function randNo() {
    let n =  Math.floor(Math.random() * 4)
    return  n
@@ -24,24 +24,26 @@ function randNo() {
 
 // create random titles
 function randTitle() {
-    return titleArr[randNo()]
+    let n =  titleArr[randNo()]
+    return titleEl.innerHTML = `<p class="animated-title">${n}</p>`
 }
-
-function role() {
-  return  titleEl.innerHTML = `<p class ="title-child">${randTitle()}</p>`
-}
-setInterval(role, 1000)
+setInterval(randTitle, 1000)
 
 
 // create random tech
 function randTech() {
-    return techArr[randNo()]
+    let n =  techArr[randNo()]
+    return techSkillsEl.textContent = n
+}
+setInterval(randTech, 1000)
+
+//create a random color and apply it to tech skills
+function randColNo() {
+  return  Math.floor(Math.random() * 256)
 }
 
-function techRole() {
-    return techEl.innerHTML = `<p>The technologies I teach are 
-    <span class="tech-skills">${randTech()}</span></p>`
- 
+function randCol() {
+    let color = `rgb(${randColNo()}, ${randColNo()}, ${randColNo()})`
+    return  techSkillsEl.style.color = color
 }
-
-setInterval(techRole, 1000)
+setInterval(randCol, 1000)
