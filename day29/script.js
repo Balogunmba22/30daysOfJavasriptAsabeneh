@@ -1,5 +1,6 @@
 const mainEl = document.querySelector('main')
 const childEl = document.querySelectorAll('.child')
+ const parentEl = document.querySelectorAll('.parent')
 
 
 //create a function which generates a random rgb number
@@ -17,6 +18,8 @@ function randomColor() {
 // apply the random colors to the main element background and set to 1s interval
 function changeMainColor() {
         mainEl.style.background = randomColor();
+        mainEl.style.fontSize = randFont()
+
       }
       setInterval(changeMainColor, 1000)
 
@@ -32,10 +35,14 @@ for (const element of childEl) {
 
 // function to generate random fonts betweeen 2rem and 4rem
 function randFont() {
-  let num ='234'
-  let n = Math.floor(Math.random() * num.length)
-  let font = num.charAt(n) + 'rem'
 
-  return font
-} // TO BE DONE LATER
+  let n = Math.floor(Math.random() * 2) + 1
+  
+  let fontSize = `${n}rem`
+  return fontSize
+}
 
+function changeMainFont() {
+ return  mainEl.style.fontSize = randFont()
+}
+setInterval(changeMainFont, 1000)
